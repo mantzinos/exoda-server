@@ -10,8 +10,8 @@ router.post("/register", async (req, res) => {
   try {
     const userGet = req.body;
     const user = new User(userGet);
-    const salt = await bcrypt.genSalt(10);
-    user.password = await bcrypt.hash(userGet.password, salt);
+    // const salt = await bcrypt.genSalt(10);
+    // user.password = await bcrypt.hash(userGet.password, salt);
     await user.save();
     res.send("ok");
   } catch (err) {
@@ -25,8 +25,8 @@ router.post("/login", async (req, res) => {
     const { username, password } = req.body;
     const user = await User.findOne({ username });
     if (user) {
-      const isMatch = await bcrypt.compare(password, user.password);
-      if (isMatch) {
+      // const isMatch = await bcrypt.compare(password, user.password);
+      if (password === user.password) {
         res.send("User login");
       } else {
         res.send("Wrong password");
