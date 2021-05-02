@@ -26,7 +26,7 @@ router.get("/exoda/:name", async (req, res) => {
     // const mono = oloi.filter(prev => prev[0].user.username === name);
     // const mono = await oloi.filter(a => a.kafes === 33);
     // const mono = await oloi.filter(a => a.user.username === "artemis");
-    const mono = oloi.filter(a => a.user.username === "artemis");
+    const mono = oloi.filter(a => a.user.username === name);
     res.send(mono);
     // res.send(oloi);
     // res.send(mono);
