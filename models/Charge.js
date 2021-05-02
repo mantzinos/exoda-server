@@ -15,7 +15,21 @@ const ChargeSchema = new mongoose.Schema({
     type: Number,
   },
   user: {
-    type: UserSchema,
+    username: {
+      type: String,
+    },
+    password: {
+      type: String,
+    },
+    email: {
+      type: String,
+    },
+    _id: {
+      type: String,
+    },
+    date: {
+      type: Date,
+    },
   },
   date: {
     type: Date,

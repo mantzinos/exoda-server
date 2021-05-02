@@ -1,7 +1,8 @@
 const express = require("express");
 const connectDB = require("./config/db");
 const cors = require("cors");
-const router = require("./routes/api/user");
+// const router = require("./routes/api/user");
+// const router = require("./routes/api/charge");
 
 connectDB();
 
